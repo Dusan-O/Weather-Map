@@ -1,0 +1,31 @@
+//
+//  ImageDownloader.swift
+//  WeatherApp
+//
+//  Created by Dusan Orescanin on 18/08/2022.
+//
+
+import Foundation
+
+class ImadeDownloader {
+    
+    let base = "http://openweathermap.org/img/wn/"
+    let end = "@2x.png"
+    
+    
+    func imageUrl(_ code: String) -> URL? {
+        return URL(string: base + code + end)
+    }
+    
+    func download(_ code: String, completion: ((Data?) -> Void)?) {
+        
+        if let url = imageUrl(code) {
+            URLSession.shared.dataTask(with: url) { d, _, _ in
+                completion?(d)
+            }.resume()
+        } else {
+            completion?(nil)
+        }
+    }
+    
+}

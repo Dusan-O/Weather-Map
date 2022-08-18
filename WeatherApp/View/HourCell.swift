@@ -15,8 +15,18 @@ class HourCell: UICollectionViewCell {
     var forecast: Forecast!
     
     func setup(_ newForecast: Forecast) {
+        contentView.backgroundColor = .secondarySystemBackground
+        contentView.layer.cornerRadius = 10
         self.forecast = newForecast
-        self.timeLbl.text = forecast.dt_txt
+        self.timeLbl.text = DateHelper.shared.convertToTime(forecast.dt)
         self.tempLbl.text = "\(Int(forecast.main.temp))°C"
+        icon.image = nil
+        ImadeDownloader().download(forecast.weather.first!.icon, completion: { data in
+            DispatchQueue.main.async {
+                if data != nil {
+                    self.icon.image = UIImage(data: data!)
+                }
+            }
+        })
     }
 }

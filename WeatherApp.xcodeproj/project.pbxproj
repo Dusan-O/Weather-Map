@@ -16,6 +16,9 @@
 		2F58C55928AE5AD800C6CA36 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F58C55828AE5AD800C6CA36 /* APIHelper.swift */; };
 		2F58C55B28AE62A900C6CA36 /* APIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F58C55A28AE62A900C6CA36 /* APIResult.swift */; };
 		2F58C55F28AE69B400C6CA36 /* HourCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F58C55E28AE69B400C6CA36 /* HourCell.swift */; };
+		2F58C56128AE8C7300C6CA36 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F58C56028AE8C7300C6CA36 /* DateHelper.swift */; };
+		2F58C56328AE8EDE00C6CA36 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F58C56228AE8EDE00C6CA36 /* ImageDownloader.swift */; };
+		2F58C56528AE928000C6CA36 /* DailyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F58C56428AE928000C6CA36 /* DailyCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		2F58C55828AE5AD800C6CA36 /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
 		2F58C55A28AE62A900C6CA36 /* APIResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResult.swift; sourceTree = "<group>"; };
 		2F58C55E28AE69B400C6CA36 /* HourCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourCell.swift; sourceTree = "<group>"; };
+		2F58C56028AE8C7300C6CA36 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		2F58C56228AE8EDE00C6CA36 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		2F58C56428AE928000C6CA36 /* DailyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,8 @@
 			children = (
 				2F58C55828AE5AD800C6CA36 /* APIHelper.swift */,
 				2F58C55A28AE62A900C6CA36 /* APIResult.swift */,
+				2F58C56028AE8C7300C6CA36 /* DateHelper.swift */,
+				2F58C56228AE8EDE00C6CA36 /* ImageDownloader.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -96,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				2F58C55E28AE69B400C6CA36 /* HourCell.swift */,
+				2F58C56428AE928000C6CA36 /* DailyCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -173,9 +182,12 @@
 			files = (
 				2F58C55928AE5AD800C6CA36 /* APIHelper.swift in Sources */,
 				2F58C55B28AE62A900C6CA36 /* APIResult.swift in Sources */,
+				2F58C56328AE8EDE00C6CA36 /* ImageDownloader.swift in Sources */,
 				2F58C54828AE59E200C6CA36 /* ViewController.swift in Sources */,
 				2F58C55F28AE69B400C6CA36 /* HourCell.swift in Sources */,
 				2F58C54428AE59E200C6CA36 /* AppDelegate.swift in Sources */,
+				2F58C56128AE8C7300C6CA36 /* DateHelper.swift in Sources */,
+				2F58C56528AE928000C6CA36 /* DailyCell.swift in Sources */,
 				2F58C54628AE59E200C6CA36 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

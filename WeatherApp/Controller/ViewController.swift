@@ -71,6 +71,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "Daily") as? DailyCell {
+            cell.setup(forecasts[indexPath.row])
+            return cell
+        }
         let cell = UITableViewCell()
         let forecast = forecasts[indexPath.row]
         var configuration = cell.defaultContentConfiguration()
