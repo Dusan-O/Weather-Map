@@ -20,6 +20,8 @@
 		2F58C56328AE8EDE00C6CA36 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F58C56228AE8EDE00C6CA36 /* ImageDownloader.swift */; };
 		2F58C56528AE928000C6CA36 /* DailyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F58C56428AE928000C6CA36 /* DailyCell.swift */; };
 		2F58C56728AEA46F00C6CA36 /* GeocoderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F58C56628AEA46F00C6CA36 /* GeocoderHelper.swift */; };
+		2F8C68C728AEA66100EBBDB3 /* UDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8C68C628AEA66100EBBDB3 /* UDHelper.swift */; };
+		2F8C68C928AEA6E800EBBDB3 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8C68C828AEA6E800EBBDB3 /* AlertHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		2F58C56228AE8EDE00C6CA36 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		2F58C56428AE928000C6CA36 /* DailyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCell.swift; sourceTree = "<group>"; };
 		2F58C56628AEA46F00C6CA36 /* GeocoderHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocoderHelper.swift; sourceTree = "<group>"; };
+		2F8C68C628AEA66100EBBDB3 /* UDHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDHelper.swift; sourceTree = "<group>"; };
+		2F8C68C828AEA6E800EBBDB3 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,8 @@
 				2F58C56028AE8C7300C6CA36 /* DateHelper.swift */,
 				2F58C56228AE8EDE00C6CA36 /* ImageDownloader.swift */,
 				2F58C56628AEA46F00C6CA36 /* GeocoderHelper.swift */,
+				2F8C68C628AEA66100EBBDB3 /* UDHelper.swift */,
+				2F8C68C828AEA6E800EBBDB3 /* AlertHelper.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -183,12 +189,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F8C68C928AEA6E800EBBDB3 /* AlertHelper.swift in Sources */,
 				2F58C55928AE5AD800C6CA36 /* APIHelper.swift in Sources */,
 				2F58C55B28AE62A900C6CA36 /* APIResult.swift in Sources */,
 				2F58C56328AE8EDE00C6CA36 /* ImageDownloader.swift in Sources */,
 				2F58C54828AE59E200C6CA36 /* ViewController.swift in Sources */,
 				2F58C55F28AE69B400C6CA36 /* HourCell.swift in Sources */,
 				2F58C56728AEA46F00C6CA36 /* GeocoderHelper.swift in Sources */,
+				2F8C68C728AEA66100EBBDB3 /* UDHelper.swift in Sources */,
 				2F58C54428AE59E200C6CA36 /* AppDelegate.swift in Sources */,
 				2F58C56128AE8C7300C6CA36 /* DateHelper.swift in Sources */,
 				2F58C56528AE928000C6CA36 /* DailyCell.swift in Sources */,

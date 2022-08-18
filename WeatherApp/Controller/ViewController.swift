@@ -55,7 +55,6 @@ class ViewController: UIViewController {
                 GeocoderHelper.shared.toString(last) { city in
                     DispatchQueue.main.async {
                         self.cityLbl.text = city
-                        
                     }
                 }
 
@@ -63,10 +62,39 @@ class ViewController: UIViewController {
         }
     }
     
+    func parse(_ str: String) {
+        APIHelper.shared.parseWeather(coords: str) { forecast in
+            DispatchQueue.main.async {
+                self.forecasts = forecast
+                self.tableView.reloadData()
+                self.collectionView.reloadData()
+                self.setupFirst()
+                
+            }
+        }
+    }
+    
+    func geocodeString(_ city: String) {
+        GeocoderHelper.shared.toLocation(city) { string, coords in
+            DispatchQueue.main.async {
+                self.lastKnownCoords = coords
+                if string != nil {
+                    self.parse(string!)
+                }
+            }
+        }
+    }
+    
     @IBAction func addCity(_ sender: Any) {
+        AlertHelper.shared.addCity(self) { city in
+            self.geocodeString(city)
+        }
     }
     
     @IBAction func changeCity(_ sender: Any) {
+        AlertHelper.shared.allCities(self) { city in
+            self.geocodeString(city)
+        }
     }
     
 }
@@ -92,19 +120,9 @@ extension ViewController: CLLocationManagerDelegate {
         str += String(describing: coords.latitude)
         str += "&lon="
         str += String(describing: coords.longitude)
-        APIHelper.shared.parseWeather(coords: str) { forecast in
-            DispatchQueue.main.async {
-                self.forecasts = forecast
-                self.tableView.reloadData()
-                self.collectionView.reloadData()
-                self.setupFirst()
-                
-            }
-        }
+        parse(str)
+        
     }
-    
-    
-
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
