@@ -12,7 +12,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var cityLbl: UILabel!
+    @IBOutlet weak var descLbl: UILabel!
+    @IBOutlet weak var tempLbl: UILabel!
+    @IBOutlet weak var imageLbl: UIImageView!
     
+    var lastKnownCoords: CLLocation?
     var forecasts: [Forecast] = []
     
     var manager: CLLocationManager = CLLocationManager()
@@ -26,8 +32,43 @@ class ViewController: UIViewController {
         collectionView.dataSource = self
         setupFlowLayout()
     }
+    
+    func setupFirst() {
+        containerView.layer.cornerRadius = 25
+        containerView.backgroundColor = .systemMint
+        imageLbl.image = nil
+        descLbl.text = ""
+        cityLbl.text = ""
+        tempLbl.text = ""
+        if let first = forecasts.first {
+            cityLbl.textColor = .white
+            ImadeDownloader().download(first.weather.first!.icon) { d in
+                DispatchQueue.main.async {
+                    if let data = d {
+                        self.imageLbl.image = UIImage(data: data)
+                    }
+                }
+            }
+            descLbl.text = first.weather.first?.description
+            tempLbl.text = "\(Int(first.main.temp))°C"
+            if let last = lastKnownCoords {
+                GeocoderHelper.shared.toString(last) { city in
+                    DispatchQueue.main.async {
+                        self.cityLbl.text = city
+                        
+                    }
+                }
 
-
+            }
+        }
+    }
+    
+    @IBAction func addCity(_ sender: Any) {
+    }
+    
+    @IBAction func changeCity(_ sender: Any) {
+    }
+    
 }
 
 extension ViewController: CLLocationManagerDelegate {
@@ -45,6 +86,7 @@ extension ViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         manager.stopUpdatingLocation()
         guard let loc = locations.first else { return }
+        self.lastKnownCoords = loc
         let coords = loc.coordinate
         var str = "?lat="
         str += String(describing: coords.latitude)
@@ -55,10 +97,14 @@ extension ViewController: CLLocationManagerDelegate {
                 self.forecasts = forecast
                 self.tableView.reloadData()
                 self.collectionView.reloadData()
+                self.setupFirst()
                 
             }
         }
     }
+    
+    
+
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {

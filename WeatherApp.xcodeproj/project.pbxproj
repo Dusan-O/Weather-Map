@@ -19,6 +19,7 @@
 		2F58C56128AE8C7300C6CA36 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F58C56028AE8C7300C6CA36 /* DateHelper.swift */; };
 		2F58C56328AE8EDE00C6CA36 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F58C56228AE8EDE00C6CA36 /* ImageDownloader.swift */; };
 		2F58C56528AE928000C6CA36 /* DailyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F58C56428AE928000C6CA36 /* DailyCell.swift */; };
+		2F58C56728AEA46F00C6CA36 /* GeocoderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F58C56628AEA46F00C6CA36 /* GeocoderHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		2F58C56028AE8C7300C6CA36 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		2F58C56228AE8EDE00C6CA36 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		2F58C56428AE928000C6CA36 /* DailyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCell.swift; sourceTree = "<group>"; };
+		2F58C56628AEA46F00C6CA36 /* GeocoderHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocoderHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				2F58C55A28AE62A900C6CA36 /* APIResult.swift */,
 				2F58C56028AE8C7300C6CA36 /* DateHelper.swift */,
 				2F58C56228AE8EDE00C6CA36 /* ImageDownloader.swift */,
+				2F58C56628AEA46F00C6CA36 /* GeocoderHelper.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				2F58C56328AE8EDE00C6CA36 /* ImageDownloader.swift in Sources */,
 				2F58C54828AE59E200C6CA36 /* ViewController.swift in Sources */,
 				2F58C55F28AE69B400C6CA36 /* HourCell.swift in Sources */,
+				2F58C56728AEA46F00C6CA36 /* GeocoderHelper.swift in Sources */,
 				2F58C54428AE59E200C6CA36 /* AppDelegate.swift in Sources */,
 				2F58C56128AE8C7300C6CA36 /* DateHelper.swift in Sources */,
 				2F58C56528AE928000C6CA36 /* DailyCell.swift in Sources */,
