@@ -15,6 +15,7 @@
 		2F58C55028AE59E500C6CA36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F58C54E28AE59E500C6CA36 /* LaunchScreen.storyboard */; };
 		2F58C55928AE5AD800C6CA36 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F58C55828AE5AD800C6CA36 /* APIHelper.swift */; };
 		2F58C55B28AE62A900C6CA36 /* APIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F58C55A28AE62A900C6CA36 /* APIResult.swift */; };
+		2F58C55F28AE69B400C6CA36 /* HourCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F58C55E28AE69B400C6CA36 /* HourCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		2F58C55128AE59E500C6CA36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F58C55828AE5AD800C6CA36 /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
 		2F58C55A28AE62A900C6CA36 /* APIResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResult.swift; sourceTree = "<group>"; };
+		2F58C55E28AE69B400C6CA36 /* HourCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +62,11 @@
 		2F58C54228AE59E200C6CA36 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				2F58C55D28AE699400C6CA36 /* View */,
+				2F58C55C28AE686C00C6CA36 /* Controller */,
 				2F58C55728AE5AC000C6CA36 /* Model */,
 				2F58C54328AE59E200C6CA36 /* AppDelegate.swift */,
 				2F58C54528AE59E200C6CA36 /* SceneDelegate.swift */,
-				2F58C54728AE59E200C6CA36 /* ViewController.swift */,
 				2F58C54928AE59E200C6CA36 /* Main.storyboard */,
 				2F58C54C28AE59E500C6CA36 /* Assets.xcassets */,
 				2F58C54E28AE59E500C6CA36 /* LaunchScreen.storyboard */,
@@ -79,6 +82,22 @@
 				2F58C55A28AE62A900C6CA36 /* APIResult.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2F58C55C28AE686C00C6CA36 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2F58C54728AE59E200C6CA36 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2F58C55D28AE699400C6CA36 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2F58C55E28AE69B400C6CA36 /* HourCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +174,7 @@
 				2F58C55928AE5AD800C6CA36 /* APIHelper.swift in Sources */,
 				2F58C55B28AE62A900C6CA36 /* APIResult.swift in Sources */,
 				2F58C54828AE59E200C6CA36 /* ViewController.swift in Sources */,
+				2F58C55F28AE69B400C6CA36 /* HourCell.swift in Sources */,
 				2F58C54428AE59E200C6CA36 /* AppDelegate.swift in Sources */,
 				2F58C54628AE59E200C6CA36 /* SceneDelegate.swift in Sources */,
 			);

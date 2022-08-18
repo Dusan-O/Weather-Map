@@ -24,6 +24,7 @@ class APIHelper {
         var urlString = base
         urlString += coords
         urlString += lang
+        urlString += units
         urlString += appID
         print(urlString)
         return URL(string: urlString)
